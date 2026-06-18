@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ho8bqusyaj8x"]
+
+[ext_resource type="PackedScene" uid="uid://sp2w6jww65g4" path="res://ground test.tscn" id="1_sy5k4"]
+
+[node name="Node" type="Node" unique_id=353310390]
+
+[node name="StaticBody3D" parent="." unique_id=143752819 instance=ExtResource("1_sy5k4")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=613780926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2761118, 0)
