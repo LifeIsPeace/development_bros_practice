@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://sp2w6jww65g4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5n31j"]
+<<<<<<< HEAD
 size = Vector3(40, 0.5, 40)
+=======
+size = Vector3(5, 0.5, 5)
+>>>>>>> fc299114fa0e3ff5043b8f733272f65f4b1540ce
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_brnxh"]
-size = Vector3(4, 0.5, 4)
+size = Vector3(5, 0.5, 5)
 
 [node name="StaticBody3D" type="StaticBody3D" unique_id=143752819]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=549349889]
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.53358793, 0)
+=======
+>>>>>>> fc299114fa0e3ff5043b8f733272f65f4b1540ce
 mesh = SubResource("BoxMesh_5n31j")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=297415890]
