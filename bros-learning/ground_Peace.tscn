@@ -24,7 +24,6 @@ shape = SubResource("BoxShape3D_lv0v5")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/CollisionShape3D" unique_id=1901992452]
 mesh = SubResource("BoxMesh_lv0v5")
 
-<<<<<<< HEAD:bros-learning/ground.tscn
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1351458072]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2078562, 14, 0)
 
@@ -35,8 +34,6 @@ mesh = SubResource("BoxMesh_yh8r4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=2075517357]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.311764, 1.9431496, 0)
 shape = SubResource("BoxShape3D_t7tip")
-[node name="pill" parent="." unique_id=1249172333 instance=ExtResource("1_yh8r4")]
-=======
+
 [node name="pill" parent="." unique_id=1249172333 instance=ExtResource("1_xaw54")]
->>>>>>> 24cd16d (Renamed my objects):bros-learning/ground_Peace.tscn
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.846, 6, 0)
