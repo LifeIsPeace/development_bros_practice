@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dlu6r7l1lxidh"]
 
 [ext_resource type="PackedScene" uid="uid://ckdc38eutyidw" path="res://pill_Peace.tscn" id="1_xaw54"]
+[ext_resource type="PackedScene" uid="uid://drmioi0bpsl3b" path="res://moveable_object.tscn" id="2_krkvb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lv0v5"]
 size = Vector3(60, 3, 60)
@@ -37,3 +38,14 @@ shape = SubResource("BoxShape3D_t7tip")
 
 [node name="pill" parent="." unique_id=1249172333 instance=ExtResource("1_xaw54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.846, 6, 0)
+
+[node name="MoveableObject" parent="." unique_id=1749711200 instance=ExtResource("2_krkvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3, 8)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2024511350]
+transform = Transform3D(0.68690366, 0.11204471, -0.7180595, 0.08241511, 0.96966064, 0.23014334, 0.7220603, -0.21726522, 0.6568291, -19.899855, 15, 22)
+fov = 111.20217
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1299079420]
+transform = Transform3D(-0.98501676, -0.172459, -1.37968295e-08, 0.12819164, -0.7321795, 0.6689394, -0.11536469, 0.6589169, 0.74331677, 0, 20, 0)
+shadow_enabled = true

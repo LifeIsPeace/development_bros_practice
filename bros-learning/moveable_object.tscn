@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://drmioi0bpsl3b"]
+
+[ext_resource type="Script" uid="uid://cbbhhblxy50sp" path="res://moveable_object.gd" id="1_chpmo"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bvbk1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bvbk1"]
+
+[node name="MoveableObject" type="CharacterBody3D" unique_id=1749711200]
+script = ExtResource("1_chpmo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1593568185]
+mesh = SubResource("CapsuleMesh_bvbk1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=841384119]
+shape = SubResource("CapsuleShape3D_bvbk1")
