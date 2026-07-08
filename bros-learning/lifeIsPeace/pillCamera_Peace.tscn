@@ -17,6 +17,3 @@ spring_length = 30.0
 
 [node name="Camera3D" type="Camera3D" parent="Pill/CameraPivot/SpringArm3D" unique_id=1692746435]
 unique_name_in_owner = true
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=254212973]
-transform = Transform3D(-0.9267034, 0, -0.37579364, -0.12915538, 0.9390843, 0.3184959, 0.3529019, 0.343687, -0.8702526, 16, 20, 0)
