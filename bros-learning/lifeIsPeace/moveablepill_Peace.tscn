@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dj3rj77u687kc"]
+
+[ext_resource type="PackedScene" uid="uid://ckdc38eutyidw" path="res://lifeIsPeace/pill_Peace.tscn" id="1_glptv"]
+[ext_resource type="Script" uid="uid://cvl3pdckdiutq" path="res://lifeIsPeace/pill_peace.gd" id="2_mau54"]
+
+[node name="Node3D" type="Node3D" unique_id=1715737157]
+
+[node name="Pill" parent="." unique_id=1249172333 instance=ExtResource("1_glptv")]
+script = ExtResource("2_mau54")
+
+[node name="CameraPivot" type="Node3D" parent="Pill" unique_id=1120679436]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Pill/CameraPivot" unique_id=2124158616]
+spring_length = 30.0
+
+[node name="Camera3D" type="Camera3D" parent="Pill/CameraPivot/SpringArm3D" unique_id=1692746435]
+unique_name_in_owner = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=254212973]
+transform = Transform3D(-0.9267034, 0, -0.37579364, -0.12915538, 0.9390843, 0.3184959, 0.3529019, 0.343687, -0.8702526, 16, 20, 0)
