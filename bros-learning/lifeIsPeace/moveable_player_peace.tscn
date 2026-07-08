@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c2jq6e53o0yk2"]
+
+[ext_resource type="Script" uid="uid://du1ux87jwoh8s" path="res://lifeIsPeace/moveable_player_peace.gd" id="1_2k14p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1iw01"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yypow"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=1700771378]
+script = ExtResource("1_2k14p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1703460139]
+shape = SubResource("CapsuleShape3D_1iw01")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D" unique_id=889242197]
+mesh = SubResource("CapsuleMesh_yypow")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=875679509]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=1924844263]
+spring_length = 30.0
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1287083592]
+unique_name_in_owner = true
