@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 # How fast the player moves in meters per second
-@export var speed = 14
+@export var speed = 30
 # Downward acceleration while in air
 @export var fall_acceleration = 500
 
