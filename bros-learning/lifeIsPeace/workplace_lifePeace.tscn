@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dfwa43he2gi2j"]
+
+[ext_resource type="PackedScene" uid="uid://81pbqm2nfe6a" path="res://lifeIsPeace/ground.tscn" id="1_nfstm"]
+[ext_resource type="PackedScene" uid="uid://dj3rj77u687kc" path="res://lifeIsPeace/moveablepill_Peace.tscn" id="2_nfstm"]
+
+[node name="Node" type="Node" unique_id=1290256394]
+
+[node name="Node" parent="." unique_id=1664255276 instance=ExtResource("1_nfstm")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439214179]
+transform = Transform3D(0.73955506, -0.65065765, -0.17234597, -0.5989987, -0.752992, 0.27240303, -0.30701607, -0.098222196, -0.94662213, -47.490448, 37.74056, 25.859333)
+shadow_enabled = true
+
+[node name="Node3D" parent="." unique_id=1715737157 instance=ExtResource("2_nfstm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5739069, 11.5, -3.784668)
