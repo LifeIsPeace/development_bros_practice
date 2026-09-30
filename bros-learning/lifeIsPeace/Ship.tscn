@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bvqdga356iewb"]
+
+[ext_resource type="Script" uid="uid://dbugshjghb1ib" path="res://lifeIsPeace/scripts/ship.gd" id="1_xign2"]
+[ext_resource type="PackedScene" uid="uid://dklhysowpjofg" path="res://lifeIsPeace/shitty_unique_ship_pt2.glb" id="2_okpv8"]
+[ext_resource type="Script" uid="uid://bs7j6vnkris6t" path="res://lifeIsPeace/scripts/thruster_manager.gd" id="3_6nprb"]
+[ext_resource type="Script" uid="uid://d3f0khbewlg7x" path="res://lifeIsPeace/scripts/thruster.gd" id="4_1ermc"]
+[ext_resource type="Script" uid="uid://g6mbl4jc27md" path="res://lifeIsPeace/scripts/ship_controller.gd" id="4_4vmir"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jjny0"]
+size = Vector3(7.0364075, 3.7418416, 29.110428)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bvbk1"]
+size = Vector3(19.276287, 2.1309814, 5.756668)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pfiug"]
+size = Vector3(8.94751, 1.903595, 4.0858154)
+
+[node name="Ship" type="RigidBody3D" unique_id=69381929]
+script = ExtResource("1_xign2")
+
+[node name="Model" type="Node3D" parent="." unique_id=1263561621]
+
+[node name="ShittyShip" parent="Model" unique_id=267895382 instance=ExtResource("2_okpv8")]
+
+[node name="CollisionMid" type="CollisionShape3D" parent="." unique_id=660548500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.798, -0.7134718, 0)
+shape = SubResource("BoxShape3D_jjny0")
+
+[node name="CollisionLeftWing" type="CollisionShape3D" parent="." unique_id=309313412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.876912, -0.7847148, 10.767639)
+shape = SubResource("BoxShape3D_bvbk1")
+
+[node name="CollisionRightWing" type="CollisionShape3D" parent="." unique_id=1673648164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.877, -0.785, -10.768)
+shape = SubResource("BoxShape3D_bvbk1")
+
+[node name="ThrusterManager" type="Node" parent="." unique_id=1249126598]
+script = ExtResource("3_6nprb")
+metadata/_custom_type_script = "uid://bs7j6vnkris6t"
+
+[node name="MainEngine_L" type="Node3D" parent="ThrusterManager" unique_id=6155582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.899845, -1.0377344, 10.718637)
+script = ExtResource("4_1ermc")
+
+[node name="MainEngine_R" type="Node3D" parent="ThrusterManager" unique_id=1989409926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.9, -1.038, -10.719)
+script = ExtResource("4_1ermc")
+
+[node name="ShipController" type="Node" parent="." unique_id=805894535]
+script = ExtResource("4_4vmir")
+metadata/_custom_type_script = "uid://g6mbl4jc27md"
+
+[node name="CollisionFrontLeft" type="CollisionShape3D" parent="." unique_id=396764650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.829854, -0.3090973, 2.0133657)
+shape = SubResource("BoxShape3D_pfiug")
+
+[node name="CollisionFrontRight" type="CollisionShape3D" parent="." unique_id=555707671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.83, -0.309, -2.013)
+shape = SubResource("BoxShape3D_pfiug")

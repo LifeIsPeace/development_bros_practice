@@ -1,10 +1,21 @@
 [gd_scene format=3 uid="uid://81pbqm2nfe6a"]
 
+[ext_resource type="PackedScene" uid="uid://bvqdga356iewb" path="res://lifeIsPeace/Ship.tscn" id="1_e0wg4"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_lv0v5"]
 size = Vector3(60, 3, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_lv0v5"]
 size = Vector3(60, 3, 60)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_v0a76"]
+
+[sub_resource type="Sky" id="Sky_jjny0"]
+sky_material = SubResource("ProceduralSkyMaterial_v0a76")
+
+[sub_resource type="Environment" id="Environment_bvbk1"]
+background_mode = 2
+sky = SubResource("Sky_jjny0")
 
 [node name="Node" type="Node" unique_id=1664255276]
 
@@ -15,3 +26,16 @@ shape = SubResource("BoxShape3D_lv0v5")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/CollisionShape3D" unique_id=1901992452]
 mesh = SubResource("BoxMesh_lv0v5")
+
+[node name="Ship" parent="." unique_id=69381929 instance=ExtResource("1_e0wg4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.959403, 14.405558, 6.7143784)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=211643769]
+transform = Transform3D(-0.6997666, 0, 0.71437156, 0, 1, 0, -0.71437156, 0, -0.6997666, 38.202297, 20.065548, -39.62968)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1388685327]
+transform = Transform3D(-0.42471236, 0.15562096, 0.8918529, 0.3266265, -0.8924286, 0.3112654, 0.8443545, 0.42350113, 0.32819554, -0.84212875, 37.257248, -8.9489565)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=462379854]
+environment = SubResource("Environment_bvbk1")
